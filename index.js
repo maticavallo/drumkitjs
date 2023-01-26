@@ -44,3 +44,13 @@ function makeSound(key) {
     console.log(key);
   }
 }
+function buttonAnimation(currentKey) {
+  // select the button with the class matching the currentKey
+  let activeButton = document.querySelector("." + currentKey);
+  // add the "pressed" class to the button
+  activeButton.classList.add("pressed");
+  // wait 100ms, then remove the "pressed" class
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
+}
